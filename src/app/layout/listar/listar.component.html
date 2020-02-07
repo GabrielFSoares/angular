@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nome Completo</th>
+    <th colspan='3'>Foto</th>
+  </tr>
+
+  <tr *ngFor="let user of lista.data">
+    <td>{{user.id}}</td>
+    <td>{{user.first_name}} {{user.last_name}}</td>
+    <td><img [attr.src]="user.avatar"></td>
+    <td>
+      <a><button mat-raised-button color="primary" (click)="edit(user.id)">Editar</button></a>
+    </td>
+    <td><button mat-raised-button color="primary" (click)="openDialog(user.id)">Excluir</button></td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>
+
+

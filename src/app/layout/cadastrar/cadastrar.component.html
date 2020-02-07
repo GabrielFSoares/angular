@@ -1,0 +1,18 @@
+<form [formGroup]="formulario">
+  <div>
+    <mat-form-field>
+      <label for="nome">Nome</label>
+      <input matInput formControlName="first_name" type="text" id="nome">
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <label for="emprego">Emprego</label>
+      <input matInput formControlName="emprego" type="text" id="emprego">
+    </mat-form-field>
+  </div>
+
+  <button [disabled]="formulario.invalid" type="submit" mat-raised-button color="primary"
+  class="w-100" (click)="cadastrar(); openDialog()">Cadastrar</button>
+</form>

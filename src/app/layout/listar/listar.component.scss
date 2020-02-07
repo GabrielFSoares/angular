@@ -1,0 +1,23 @@
+table{
+  width: 100%;
+  text-align: left;
+  border-spacing: 0px;
+}
+
+th{
+  color: gray;
+  font-size: 15px;
+  font-weight: normal;
+  height: 50px;
+  }
+
+td, th{
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  height: 60px;
+  width: 60px;
+}
+
+img{
+  border-radius: 360px;
+  width: 60px;
+}

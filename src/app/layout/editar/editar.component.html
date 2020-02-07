@@ -1,0 +1,18 @@
+<form [formGroup]="formulario">
+  <div>
+      <label for="nome" class="disabled">Nome</label><br>
+      <input formControlName="first_name" class="disabled" type="text" id="nome" disabled>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <label for="emprego">Emprego</label><br>
+      <input formControlName="emprego" matInput type="text" id="emprego">
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button color="primary" [disabled]="formulario.invalid" (click)="atualizar(); openDialog()"
+  type="submit" [routerLink]="['/listar']">Atualizar</button>
+</form>
+
+<router-outlet></router-outlet>
